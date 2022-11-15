@@ -4,22 +4,22 @@ import "./Pokedex.css";
 /** Renders a sequence of Pokecard components from a provided array like:
  *  -props: pokemons
  * [
- *  {id: 4,   name: 'Charmander', type: 'fire',     base_experience: 62},
- *  {id: 7,   name: 'Squirtle',   type: 'water',    base_experience: 63},
+ *  {id: 4,   name: 'Charmander', type: 'fire',     baseExp: 62},
+ *  {id: 7,   name: 'Squirtle',   type: 'water',    baseExp: 63},
  *  ...
  * ]
 */
 
-function Pokedex({pokedex}) {
+function Pokedex({pokemon}) {
   return(
   <div>
     <h2 className="Pokedex-title">Pokedex</h2>
-    {pokedex.map(p => (
+    {pokemon.map(p => (
     <Pokecard
       id = {p.id}
       name = {p.name}
       type = {p.type}
-      baseExp = {p.base_experience}
+      baseExp = {p.baseExp}
     />))}
   </div>
   );
